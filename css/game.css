@@ -1,0 +1,86 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 20px 50px;
+    background-image: url(../img/paisagem.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    transition: all 500ms ease;
+    transform-style: preserve-3d;
+}
+
+
+
+.frente {
+    
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+    border: 2px solid #0D9CFA;
+    border-radius: 5px;
+}    
+
+.tras {
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+    
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled{
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+.player {
+  font-family:fantasy;
+  font-size: larger;
+  font-style: oblique;
+  
+}
+
